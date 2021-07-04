@@ -54,6 +54,4 @@ class SessionGlob extends BaseArrayGlob
     {
         return $this->set(SessionConsts::KEY_USERS, $users);
     }
-
-    
 }

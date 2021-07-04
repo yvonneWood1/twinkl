@@ -75,8 +75,7 @@ class DashboardUserModel
      * @return array
      */
     public function getUsers(): array
-    {
-        echo $this->users;
+    {        
         return $this->users;
     }
     
