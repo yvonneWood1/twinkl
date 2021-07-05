@@ -2,7 +2,6 @@ import $ from "jquery";
 import DashboardUserAdd from "./DashboardUserAdd";
 import BaseComponent from "../../Core/Component/BaseComponent";
 import DashboardUserEdit from "./DashboardUserEdit";
-
 export default class Dashboard extends BaseComponent {
     constructor(elem) {
         super(elem);

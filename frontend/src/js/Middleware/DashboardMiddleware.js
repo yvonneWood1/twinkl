@@ -13,4 +13,8 @@ export default class DashboardMiddleware extends BaseMiddleware
     static deleteUser(userId, successHandler) {
         this.delete(`/dashboard/users/${userId}`, null, successHandler);
     }
+
+    static debugUsers(response, successHandler) {
+        this.get(`/dashboard/users/`, null, successHandler);
+    }
 }
