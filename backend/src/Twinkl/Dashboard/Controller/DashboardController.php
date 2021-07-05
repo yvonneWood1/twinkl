@@ -45,6 +45,8 @@ class DashboardController extends RootController
         $users = $this->dashUserModel
             ->loadAllusers()
             ->getUsers();
+            dump($users);
+            
         return $this->createResponse(
             $this->renderIndex($users)
         );

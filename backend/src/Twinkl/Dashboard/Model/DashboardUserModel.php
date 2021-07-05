@@ -153,7 +153,6 @@ class DashboardUserModel
         array_push($this->users, ...$users);
         return $this;
     }
-    
     /**
      * @param int[] $userIds
      * @return $this

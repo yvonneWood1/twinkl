@@ -28,15 +28,18 @@ class UserCreator extends BaseCrud
      * @param array $users
      * @return array
      * @throws Exception
+     * 
      */
     public function createAll(array $users)
     {
         if (!array_filter($users)) {
             throw new \LogicException('Users are not defined.', HttpConsts::CODE_SERVER_ERROR);
         }
+        dump($this->processCreateAllUsingDb($users));
         return $this->useSessAsDb() ?
             $this->processCreateAllUsingSess($users)
             : $this->processCreateAllUsingDb($users);
+            
     }
     
     /**
@@ -62,7 +65,7 @@ class UserCreator extends BaseCrud
         $currUsers = $sess->getUsers();
         $newUsers = $this->sanitiseCreateUsers($users);
         $sess->setUsers(
-            array_merge($currUsers, $newUsers)
+            array_unique(array_merge($currUsers, $newUsers))            
         );
         return array_column($newUsers, 'id');
     }
