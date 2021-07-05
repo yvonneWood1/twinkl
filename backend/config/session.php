@@ -19,3 +19,5 @@ if ($sess->getUsers() == null) {
         )
     );
 }
+
+dump($sess->getUsers());
