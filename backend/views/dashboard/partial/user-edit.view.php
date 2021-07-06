@@ -5,7 +5,6 @@ use Twinkl\Dashboard\Widget\User\DashboardUserEditWidget;
 $widget;
 ?>
 
-
 <div class="widget widget-block dash-user-edit"
      data-user-id="<?= $this->e($widget->getId()) ?>"
      >

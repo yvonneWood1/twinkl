@@ -54,7 +54,7 @@ class DashboardWidgetBuilder extends BaseWidgetBuilder
      * @return array
      */
     public function getUsers(): array
-    {      
+    {
         return $this->users;
     }
     

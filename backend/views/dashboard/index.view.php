@@ -12,13 +12,12 @@ $widget;
     <div class="banner page-banner-block bg-blue">
         <img class="d-block m-auto" src="<?= $widget->getTwinklLogo() ?>" width="120" height="75" />
     </div>
-    fefef
+    
     <div class="widget widget-block dash">
- 
         <?php foreach ($widget->getUserWidgets() as $iUserWidget) : ?>
             <?= $this->insert(
                 $iUserWidget->getTemplateName() ?? TemplateConsts::FLD_DASH . '::partial/user-edit',
-                ['widget' => $iUserWidget]            
+                ['widget' => $iUserWidget]
             ) ?>
         <?php endforeach ?>
     </div>
@@ -26,6 +25,4 @@ $widget;
     <div class="banner page-banner-block bg-blue">
     
     </div>
-
 </div>
-       

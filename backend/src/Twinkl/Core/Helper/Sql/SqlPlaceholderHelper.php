@@ -15,7 +15,6 @@ use Twinkl\Core\Helper\EvalExt\EvalHelper;
  * @package Twinkl\Core\Helper\Sql
  */
 class SqlPlaceholderHelper extends BaseHelper
- 
 {
     /*
      * Properties

@@ -45,10 +45,17 @@ class DashboardController extends RootController
         $users = $this->dashUserModel
             ->loadAllusers()
             ->getUsers();
-            dump($users);
-            
         return $this->createResponse(
             $this->renderIndex($users)
+        );
+    }
+
+    public function addUser()
+    {
+        $this->buildDashboardWidget();
+        return $this->render(
+            TemplateConsts::FLD_DASH . '::add',
+            ['widget' => $this->dashWidgetBuilder->getDashboardWidget()]
         );
     }
     

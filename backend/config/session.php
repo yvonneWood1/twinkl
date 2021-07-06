@@ -5,7 +5,7 @@ use Twinkl\Core\Glob\SessionGlob;
 session_start();
 $sess = new SessionGlob();
 
-if ($sess->getUsers() == null) {
+if ($sess->getUsers() === null) {
     $sess->setUsers(
         array_map(
             static function ($iId) {
@@ -19,5 +19,3 @@ if ($sess->getUsers() == null) {
         )
     );
 }
-
-dump($sess->getUsers());

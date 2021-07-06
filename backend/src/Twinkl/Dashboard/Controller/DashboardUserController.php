@@ -50,7 +50,7 @@ class DashboardUserController extends RootController
             $newUser = $this
                 ->getDashboardUserModel()
                 ->saveUsers([$newUser])
-                ->getUsers()[0] -> array_unique();
+                ->getUsers()[0];
             return $this->createResponse(
                 $this->renderUserEditWidget($newUser)
             );

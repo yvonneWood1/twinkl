@@ -101,5 +101,6 @@ class ServerError
     public function getLine()
     {
         return $this->line;
+        
     }
 }

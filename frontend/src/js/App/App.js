@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import DashboardUserAdd from "../Dashboard/Component/DashboardUserAdd";
 import Dashboard from "../Dashboard/Component/Dashboard";
 
 export default class App
@@ -7,8 +8,9 @@ export default class App
     {
         this.bodyElem = $('body');
         this.bodyElem.find('.widget.widget-block.dash')
-            .each(function (i, iDashUserCreate) {                
-                new Dashboard(iDashUserCreate);
+            .each(function (i, iDashUserCreate, iDashboardUserAdd) {
+                new DashboardUserAdd(iDashboardUserAdd);
+                new Dashboard(iDashUserCreate, iDashboardUserAdd);
             });
     }
 }

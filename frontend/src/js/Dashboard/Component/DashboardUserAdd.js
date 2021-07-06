@@ -14,22 +14,29 @@ export default class DashboardUserAdd extends BaseComponent {
     addListeners() {
         if (!this.elem) {
             return;
-        }        
-        this.addBtn.click(this.onWidgetClick.bind(this));        
+        }
+        this.addBtn.click(this.onWidgetClick.bind(this));
     }
 
     onWidgetClick(evt) {
         if (evt) {
             evt.preventDefault();
         }
+        this.sendUserAdd();
     }
 
-    onGetUserCreateSuccess(userCreateElem) {
-        this.prependUserCreateWidget($(userCreateElem));
+    sendUserAdd() {
+        DashboardMiddleware.addUser(            
+            this.handleUserCreateSuccess.bind(this)
+        );
     }
 
-    prependUserCreateWidget(userCreateElem) {
-        this.elem.before(userCreateElem);
-        new DashboardUserCreate(userCreateElem);
+    handleUserCreateSuccess(userAddElem) {
+        this.replaceWithAddWidget($(userAddElem));
+    }
+
+    replaceWithAddWidget(userAddElem) {
+        this.elem.replaceWith(userAddElem);
+        new DashboardUserEdit(userAddElem);
     }
 }

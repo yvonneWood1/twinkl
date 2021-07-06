@@ -12,8 +12,12 @@ try {
     $router = new Router(new Dispatcher());
     
     $router->resource('dashboard/users', DashboardUserController::class);
+
+    $router->resource('dashboard/users/create', DashboardUserController::class);    
     
     $router->any('/', [DashboardController::class, 'index']);
+
+   
     
     $router
         ->dispatch($request)

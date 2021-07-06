@@ -174,4 +174,6 @@ class FilterVarOptions implements IArrayable
     {
         return $this->getAll();
     }
+
+    
 }

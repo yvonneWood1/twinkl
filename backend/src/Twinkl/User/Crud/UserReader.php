@@ -30,7 +30,7 @@ class UserReader extends BaseCrud
      */
     public function getAllById(array $userIds)
     {
-        if (!($userIds = array_unique($userIds))) {
+        if (!($userIds = array_filter($userIds))) {
             throw new InvalidArgumentException(
                 'User IDs are not defined.',
                 HttpConsts::CODE_SERVER_ERROR
@@ -47,8 +47,8 @@ class UserReader extends BaseCrud
      */
     public function getById(int $userId)
     {
-        $users = $this->getById($userId);        
-        return array_unique($users);
+        $users = $this->getAllById([$userId]);
+        return array_pop($users);
     }
     
     /**
@@ -59,7 +59,7 @@ class UserReader extends BaseCrud
         return User
             ::hydrate(
                 User::returnConnection()->select('
-                    SELECT
+                    SELECT DISTINCT
                         `u`.*
                     FROM
                         `user` AS `u`
