@@ -1,4 +1,4 @@
-# Twinkl - Web Dev - Web Support (WS) tech exercise V1
+# PHP MVC Web Dev - Web Support (WS) tech exercise V1
 
 Welcome to the WS tech exercise.
 
