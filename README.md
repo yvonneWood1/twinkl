@@ -1,7 +1,5 @@
 # PHP MVC Web Dev - Web Support (WS) tech exercise V1
 
-Welcome to the WS tech exercise.
-
 ---
 
 ## About the application
@@ -43,26 +41,4 @@ SQL scripts for the DB structure used in this test, can be found: "**backend/dat
 4. Execute `npm run build` to build the distributables into the "/public" folder.
 
 ---
-
-## Exercises
-
-### 1.
-
-There is a bug when loading the application, please debug and resolve so the users appear on the main page.
-
-### 2.
-
-Not all of the available users appear on the dashboard and there is a duplicate user. The DB data is currently correct, please investigate the code and amend the bug causing a limited amount of users and a duplicate to appear.
-
-### 3.
-
-There is a bug when clicking "Add User", please resolve to enable a widget to appear for creating a user.
-
-### 4.
-
-Currently the "Update" button for existing users is not operational. Please implement the JS & PHP required to update a user's details.
-
-### 5.
-
-Currently the SQL schema for the database & tables (see **./database/tables**) have not been optimised for queries. Please amend the schema so ensure optimum performance on the most common queries / operations. 
  
